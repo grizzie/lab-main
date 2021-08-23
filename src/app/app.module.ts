@@ -21,8 +21,7 @@ import { FooterComponent } from './footer/footer.component';
 import { PlanComponent } from './plan/plan.component';
 import { AwardsComponent } from './awards/awards.component';
 import { BehindTheSceneComponent } from './behind-the-scene/behind-the-scene.component';
-import {MatExpansionModule} from '@angular/material/expansion';
-import { IvyCarouselModule } from "angular-responsive-carousel";
+import { MatExpansionModule } from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
@@ -49,7 +48,6 @@ import { IvyCarouselModule } from "angular-responsive-carousel";
     NgbModule,
     BrowserAnimationsModule,
     MatExpansionModule,
-    IvyCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
