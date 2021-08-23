@@ -1,0 +1,76 @@
+<!-- 轮播（Carousel）指标 -->
+<div id="carouselExampleDark" class="carousel slide carousel-fade carousel-light slide" data-bs-ride="carousel">
+  <div class="banner-area">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <!-- <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button> -->
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <a (click)="goToLink('https://smiletaiwan.cw.com.tw/article/3982')">
+          <img [src]="pic1" /></a>
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img [src]="pic2" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <div class="title-area">
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+<script src="http://cdn.static.w3big.com/libs/angular.js/1.4.6/angular.min.js"></script>
+
+
+<body>
+
+  <div class="content-area">
+    <div class="container">
+      <br>
+      <a routerLink="/professor" class="nav-tab">指導教授</a>&nbsp;&nbsp;&nbsp;
+      <a routerLink="/plan" class="nav-tab">計畫</a>&nbsp;&nbsp;&nbsp;<a [href]="myVar" class="nav-tab">報導</a>&nbsp;&nbsp;
+      <a routerLink="/awards" class="nav-tab">獲獎</a>&nbsp;&nbsp;<a routerLink="/about" class="nav-tab">簡介</a>
+      <hr class="hr-solid">
+      <div class="row">
+        <div class="wrapper">
+          <!-- <div ng-init="myVar = 'http://www.runoob.com'">
+            <h1>菜鸟教程</h1>
+            <p>访问 <a [href]="{{myVar}}">{{myVar}}</a> 学习!</p>
+        </div> -->
+          <div class="middle" data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">
+            <p>吳庭育教授帶領團隊接受天下雜誌微笑台灣——智慧農業專訪，「揭開松露生長之秘就靠智慧装置發功」。</p>
+            <p>團隊成員包括鄭伏杰、何基銓、黃博鴻、盧映廷、王駿騰、林聖博、林君泓、吳元詳、王采筑。</p>
+            <p>
+              考量全球人工培育松露的成功案例並不多見，過去至今都缺乏科學資料的佐證，吳庭育教授團隊取得科技部「智慧科技於農業生產之應用」專案的支持，整合感測器、頻譜分析、網路通訊、雲端儲存、大數據等相關軟硬體，準備透過智慧科技取得監測數據，分析、拆解松露的秘密。
+            </p>
+          </div>
+          <br>
+          <br>
+          <img [src]="myimage" />
+          <br>
+          <br>
+
+          <a class="btn" target="_blank" [href]="myVar">完整報導⚡</a>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<app-footer></app-footer>

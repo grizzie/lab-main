@@ -1,0 +1,109 @@
+<body>
+
+    <div class="box-area">
+    
+    <div class="banner-area">
+        <div class="title-area">
+
+        <h2>實驗室計畫
+        </h2>
+        </div>
+    </div>
+    <div class="content-area"><div class="container">
+		<div class="row">
+        <div class="wrapper">
+            <h2><div data-aos="fade-down" data-aos-duration="1000" data-aos-once="true">
+                實驗室計畫</div></h2>
+            <h4>A.Project Investigator(計畫主持人)</h4>
+            <ul class="a">
+                <br>
+                <li>
+                    <a class="thick">110年度科技部計畫「量子星空地一體化6G行動網路水下網路通訊研究」</a><br>計畫主持人、執行期間2021/8/1~2022/07/31、MOST 110-2221-E-020-023
+                </li>
+                <br>
+                <li>
+                    <a class="thick">109年教育部智慧聯網技術與應用人才培育計畫</a><br>智慧聯網技術課程推廣計畫「雲端運算與行動計算」-課程主持人、執行期間2020/8/1~2021/6/30
+                </li>
+                <br>
+                
+
+                <li>
+                    <a class="thick">108年度科技部產學合作研究計畫「獨立型綠能智慧電力監控與高效能傳輸系統開發」</a><br>計畫主持人、執行期間2019/11/01~2020/10/31、MOST 108-2622-E-197-007 -CC3
+                </li>
+                <br>
+                <li>
+                    <a class="thick">107年教育部-行動寬頻課程推廣計畫</a><br>「深度學習」-課程主持人、執行期間2018/12/1~2020/01/31
+                </li>
+                <br>
+                <li>
+                    <a class="thick">107年度科技部產學合作研究計畫「雲端助聽器線上即時適配與體驗互動系統開發」</a><br>計畫主持人、執行期間2018/11/1~2019/10/31、MOST 107-2622-E-197 -008 -CC3
+                </li>
+                <br>
+                <li>
+                    <a class="thick">107年度、108年度、109年度科技部計畫「基於深度學習之後5G行動網路－子計畫五</a><br>基於深度學習型後5G行動網路干擾避免與管理研究」-計畫主持人、執行期間2018/8/1~2021/07/31、MOST 107-2221-E-197 -007 -MY3
+                </li>
+                <br>
+                <button *ngIf="!isShow" (click)="isShow=true">展開內容⚡</button>
+						<div *ngIf="isShow">
+                <div *ngFor="let projectA of projectsA">
+                    <li>
+                        <a class="thick">{{projectA.title}}</a><br>{{projectA.details}}
+                    </li>
+                    <br>
+                    
+                </div>
+                <button (click)="isShow=false">收回內容⚡</button>
+            </div>
+                
+            </ul>
+            <br>
+            <br>
+            <h4>B.Project Co-Investigator(計畫偕同主持人或參與人員)
+            </h4>
+            <br>
+            <ul class="a">
+                <li>
+                    <a class="thick">108年度、109年度科技部計畫「松露新興產業最後一哩路-智慧裝置之開發與應用」</a><br>協同主持人、執行期間2019/10/1~2021/09/30、MOST 108-2321-B-197-004-
+                </li>
+                <br>
+                <li>
+                    <a class="thick">107年度科技部計畫「松露新興產業最後一哩路-智慧裝置之開發與應用」</a><br>協同主持人、執行期間2018/07/01~2019/06/30、MOST 107-2321-B-197-004
+                </li>
+                <br>
+                <li>
+                    <a class="thick">107年教育部-資通訊軟體創新人才推升推廣計畫</a><br>「雲端運算分散式平台AI應用」-協同主持人、執行期間2018/02/1~2019/1/31
+                </li>
+                <br>
+                <button *ngIf="!isShow" (click)="isShow=true">展開內容⚡</button>
+                <div *ngIf="isShow">
+                <div *ngFor="let projectB of projectsB">
+                    
+                    <li>
+                        <a class="thick">{{projectB.title}}</a><br>{{projectB.details}}
+                    </li>
+                    <br></div>
+                    <button (click)="isShow=false">收回內容⚡</button>
+
+                </div>
+            </ul>
+<br>
+<br>
+<br>
+			</div>
+    </div>
+    </div>
+    </div>
+  
+
+    </div>
+    </body>
+    <app-footer></app-footer>
+
+    <!-- <div *ngIf= i !< num>
+        <button *ngIf="!isShow" (click)="isShow=true">展開內容</button>
+<div *ngIf="isShow">
+        <li>
+            <a class="thick">{{projectA.title}}</a><br>{{projectA.details}}
+        </li>
+        <br>
+    </div></div> -->
