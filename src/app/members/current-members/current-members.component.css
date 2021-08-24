@@ -111,7 +111,7 @@ p{
   
 .avatar {
     /* This image is 687 wide by 1024 tall, similar to your aspect ratio */
-    background-image: url("avataaars.svg");
+    background-image: url("/assets/images/avataaars.svg");
     /* make a square container */
     width: 180px;
     height: 180px;
@@ -129,7 +129,7 @@ p{
 }
 .avatar-f {
     /* This image is 687 wide by 1024 tall, similar to your aspect ratio */
-    background-image: url("avataaars-f2.svg");
+    background-image: url("/assets/images/avataaars-f2.svg");
     
     /* make a square container */
     width: 180px;
