@@ -17,109 +17,79 @@
               <div data-aos="fade-down" data-aos-duration="1000" data-aos-once="true">
                 歷年成員</div>
             </h2>
-            <ng-container *ngFor="let listInfo of studentList">
+            <ng-container multi=true *ngFor="let listInfo of studentList">
 
-              <mat-accordion multi=true class="custom-accordion">
+              <mat-accordion class="custom-accordion">
+                <mat-expansion-panel *ngFor="let student of listInfo.student.proStudent">
+                  <mat-expansion-panel-header>
+                    <div class="col"><strong>
+                        {{student.name}}</strong>
+                      <div ng-if="student > 0">
+                      </div>
+                      畢業論文：{{student.title}}
+                    </div>
+                  </mat-expansion-panel-header>
+                  <mat-panel-description>
+                    <div class="col">大學： {{student.uni}}
+                      <div ng-if="student > 0">
+                      </div>{{student.year}}年{{student.field}}畢業
+                    </div>
+                  </mat-panel-description>
+                </mat-expansion-panel>
+                <mat-expansion-panel *ngFor="let student of listInfo.student.proJobStudent">
+                  <mat-expansion-panel-header>
+                    <div class="col"><strong>
+                        {{student.name}}</strong>
+                      <div ng-if="student > 0">
+                      </div>
+                      畢業論文：{{student.title}}
+                    </div>
+                  </mat-expansion-panel-header>
 
-                <ng-container *ngIf="listInfo.student.proStudent.length > 0">
-                  <div *ngFor="let student of listInfo.student.proStudent">
-                    <mat-expansion-panel>
-                      <mat-expansion-panel-header>
-                        <div class="col"><strong>
-                            {{student.name}}</strong>
-                          <div ng-if="student > 0">
-                          </div>
-                          畢業論文：{{student.title}}
-                        </div>
-                      </mat-expansion-panel-header>
-                      <mat-panel-description>
-                        <div class="col">大學： {{student.uni}}
-                          <div ng-if="student > 0">
-                          </div>{{student.year}}年{{student.field}}畢業
-                        </div>
-                      </mat-panel-description>
-                    </mat-expansion-panel>
-
-
-                  </div>
-                </ng-container>
-
+                  <mat-panel-description>
+                    <div class="col">大學： {{student.uni}}
+                      <div ng-if="student > 0">
+                      </div>{{student.year}}年{{student.field}}畢業
+                    </div>
+                  </mat-panel-description>
+                </mat-expansion-panel>
+                <mat-expansion-panel *ngFor="let student of listInfo.student.masterStudent">
+                  <mat-expansion-panel-header>
+                    <div class="col"><strong>
+                        {{student.name}}</strong>
+                      <div ng-if="student > 0">
+                      </div>
+                      畢業論文：{{student.title}}
+                    </div>
+                  </mat-expansion-panel-header>
+                  <mat-panel-description>
+                    <div class="col">大學：{{student.uni}}
+                      <div ng-if="student > 0">
+                      </div>{{student.year}}年{{student.field}}畢業
+                    </div>
+                  </mat-panel-description>
+                </mat-expansion-panel>
                 <div ng-if="student > 0">
                 </div>
-                <ng-container *ngIf="listInfo.student.proJobStudent.length > 0">
-                  <div *ngFor="let student of listInfo.student.proJobStudent">
-                    <mat-expansion-panel>
-                      <mat-expansion-panel-header>
-                        <div class="col"><strong>
-                            {{student.name}}</strong>
-                          <div ng-if="student > 0">
-                          </div>
-                          畢業論文：{{student.title}}
-                        </div>
-                      </mat-expansion-panel-header>
+                <mat-expansion-panel *ngFor="let student of listInfo.student.masterJobStudent">
+                  <mat-expansion-panel-header>
+                    <div class="col"><strong>
+                        {{student.name}}</strong>
+                      <div ng-if="student > 0">
+                      </div>
+                      畢業論文：{{student.title}}
+                    </div>
+                  </mat-expansion-panel-header>
 
-                      <mat-panel-description>
-                        <div class="col">大學： {{student.uni}}
-                          <div ng-if="student > 0">
-                          </div>{{student.year}}年{{student.field}}畢業
-                        </div>
-                      </mat-panel-description>
-                    </mat-expansion-panel>
-
-                  </div>
-                </ng-container>
-                <div ng-if="student > 0">
-                </div>
-                <ng-container *ngIf="listInfo.student.masterStudent.length > 0">
-                  <div *ngFor="let student of listInfo.student.masterStudent">
-                    <mat-expansion-panel>
-                      <mat-expansion-panel-header>
-                        <div class="col"><strong>
-                            {{student.name}}</strong>
-                          <div ng-if="student > 0">
-                          </div>
-                          畢業論文：{{student.title}}
-                        </div>
-                      </mat-expansion-panel-header>
-                      <mat-panel-description>
-                        <div class="col">大學：{{student.uni}}
-                          <div ng-if="student > 0">
-                          </div>{{student.year}}年{{student.field}}畢業
-                        </div>
-                      </mat-panel-description>
-                    </mat-expansion-panel>
-
-                  </div>
-                </ng-container>
-                <div ng-if="student > 0">
-                </div>
-                <ng-container *ngIf="listInfo.student.masterJobStudent.length > 0">
-                  <div *ngFor="let student of listInfo.student.masterJobStudent">
-                    <mat-expansion-panel>
-                      <mat-expansion-panel-header>
-                        <div class="col"><strong>
-                            {{student.name}}</strong>
-                          <div ng-if="student > 0">
-                          </div>
-                          畢業論文：{{student.title}}
-                        </div>
-                      </mat-expansion-panel-header>
-
-                      <mat-panel-description>
-                        <div class="col">大學： {{student.uni}}
-                          <div ng-if="student > 0">
-                          </div>{{student.year}}年{{student.field}}畢業
-                        </div>
-                      </mat-panel-description>
-                    </mat-expansion-panel>
-
-                  </div>
-                </ng-container>
-
+                  <mat-panel-description>
+                    <div class="col">大學： {{student.uni}}
+                      <div ng-if="student > 0">
+                      </div>{{student.year}}年{{student.field}}畢業
+                    </div>
+                  </mat-panel-description>
+                </mat-expansion-panel>
               </mat-accordion>
             </ng-container>
-
-
           </div>
         </div>
         <br>
